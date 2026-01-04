@@ -14,7 +14,7 @@ const Banner = () => {
                     
 
                     <motion.img  src={team1}
-                     animate = {{x:[-10, 350, -10],  transition:{duration:25, repeat: Infinity},
+                     animate = {{x:[-10, 350, -10],  transition:{duration:19, repeat: Infinity},
                     }}
                      className=' w-50  h-60 object-cover rounded-l-full' alt="" />
                      
@@ -25,7 +25,7 @@ const Banner = () => {
                      className='w-30  object-cover' alt="" />
 
                      <motion.img  src={team2}
-                     animate = {{x:[10, -350,10],  transition:{duration:25, repeat: Infinity},
+                     animate = {{x:[10, -350,10],  transition:{duration:19, repeat: Infinity},
                     }}
                      className='w-50  h-60 object-cover rounded-r-full' alt="" />
 
