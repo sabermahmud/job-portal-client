@@ -1,7 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { NavLink } from 'react-router';
 import "./navbar.css"
+import { AuthContext } from '../../contexts/AuthContext';
+import { BsListNested } from 'react-icons/bs';
 const NavBar = () => {
+    // useContexts
+    const { user,userLogOut } = useContext(AuthContext)
+    // log out
+    const handleLogout = () => {
+        userLogOut()
+        .then(()=>{
+
+        })
+        .catch(error=>{
+            console.log(error)
+        })
+    }
     return (
         <div className="navbar bg-base-100 shadow-sm">
             <div className="navbar-start">
@@ -23,7 +37,9 @@ const NavBar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <NavLink to={"/login"}><a className="btn bg-blue-500">Log in</a></NavLink>
+                {
+                    user ? <button onClick={handleLogout} className='btn bg-red-500'>Log Out</button> : <NavLink to={"/login"}><button className="btn bg-blue-500">Log in</button></NavLink>
+                }
             </div>
         </div>
     );
