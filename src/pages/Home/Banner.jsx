@@ -7,9 +7,9 @@ import team3 from "../../assets/hero/team3.jpg"
 
 const Banner = () => {
     return (
-        <div className="hero bg-base-200 min-h-96 border-2 ">
+        <div className="hero bg-base-200 min-h-96  ">
             <div className="hero-content flex-col lg:flex-row-reverse">
-                <div className='  flex flex-1 w-full '>
+                <div className='hidden  lg:flex flex-1 w-full '>
 
                     
 
